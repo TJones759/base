@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Battleship</title>
+		<style>
+			body {
+				background-color: transparent;
+			}
+			
+			div#board {
+				position: cetner;
+				width: 1024px;
+				height: 1024px;
+				margin-left: 100px;
+				margin-top: 100px;
+				background: url("tictactoe.jpg") no-repeat;
+			}
+			div#messageArea {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				color: rgb(30, 175, 19);
+			}
+			table {
+				position: absolute;
+				left: 99px;
+				top: 93px;
+				border-spacing: 0px;
+			}
+			td {
+				width: 76px;
+				height: 76px;
+			}
+			form {
+				position: absolute;
+				bottom: 0px;
+				right: 0px;
+				padding: 15px;
+				background-color: rgb(83, 15, 19);
+			}
+			form input {
+				background-color: rgb(152, 207, 113);
+				border-color: rgb(83, 175, 19);
+				font-size: 1em;
+			}
+			.x {
+				background: url("x.png") no-repeat center center;
+			}
+
+			.o {
+				background: url("o.png") no-repeat center center;
+			}
+			
+		</style>
+	</head>
+	<body>
+		<div id="board">
+			<div id="messageArea">
+			</div>
+			<table>
+				<tr>
+					<td id="00"></td><td id="01"></td><td id="02"></td>
+				</tr>
+				<tr>
+					<td id="10"></td><td id="11"></td><td id="12"></td>
+				</tr>
+				<tr>
+					<td id="20"></td><td id="21"></td><td id="22"></td>
+				</tr>
+			</table>
+			<form>
+				<input type="text" id="guessInput" placeholder="A0">
+				<input type="button" id="guessButton" value="Enter Location of X">
+			</form>
+		</div>
+		<script src="tictactoe.js"></script>
+	</body>
+</html>
