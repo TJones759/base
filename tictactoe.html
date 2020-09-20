@@ -2,14 +2,13 @@
 <html lang="en">
 	<head>
 		<meta charset="utf-8">
-		<title>Battleship</title>
+		<title>TicTacToe</title>
 		<style>
 			body {
 				background-color: transparent;
 			}
 			
 			div#board {
-				position: cetner;
 				width: 1024px;
 				height: 1024px;
 				margin-left: 100px;
@@ -22,6 +21,12 @@
 				left: 0px;
 				color: rgb(30, 175, 19);
 			}
+			div#scoreArea {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				color: rgb(30, 175, 19);
+			}
 			table {
 				position: absolute;
 				left: 99px;
@@ -30,7 +35,7 @@
 			}
 			td {
 				width: 76px;
-				height: 76px;
+				height: 76px
 			}
 			form {
 				position: absolute;
@@ -51,13 +56,63 @@
 			.o {
 				background: url("o.png") no-repeat center center;
 			}
-			
+			div#hor {
+				position: absolute;
+				top: 125px;
+				left: 110px;
+				height: 20px;
+				width: 220px;
+				background: url("hor.png") no-repeat;
+				display: none;
+			}
+			div#vert {
+				position: absolute;
+				top: 100px;
+				left: 130px;
+				height: 220px;
+				width: 20px;
+				background: url("vert.png") no-repeat center center;
+				display: none;
+			}
+			div#diag1 {
+				margin-top: 0px;
+				margin-left: 0px;
+				height: 220px;
+				width: 220px;
+				background: url("diag1.png") no-repeat center center;
+				display: none;
+			}
+			div#diag2 {
+				margin-top: 0px;
+				margin-left: 0px;
+				height: 220px;
+				width: 220px;
+				background: url("diag2.png") no-repeat center center;
+				display: none;
+			}
+			.button {
+				position: absolute;
+				left: 0px;
+				padding: 15px;
+				display: inline-block;
+				background-color: rbg(83, 175, 19);
+				text-align: center;
+			}
+			.button1 {
+				bottom: 0px;
+			}
+			.button2 {
+				bottom: 50px;
+			}
 		</style>
 	</head>
 	<body>
 		<div id="board">
 			<div id="messageArea">
 			</div>
+			<div id="scoreArea">
+			</div>
+
 			<table>
 				<tr>
 					<td id="00"></td><td id="01"></td><td id="02"></td>
@@ -73,7 +128,13 @@
 				<input type="text" id="guessInput" placeholder="A0">
 				<input type="button" id="guessButton" value="Enter Location of X">
 			</form>
+			<div id="hor"></div>
+			<div id="vert"></div>
+			<div id="diag1"></div>
+			<div id="diag2"></div>
 		</div>
+		<button id="playAgainButton" class="button button1">Play Again</button>
+		<button id="difficultyButton" class="button button2">Difficulty: Easy</button>
 		<script src="tictactoe.js"></script>
 	</body>
 </html>

@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>Play 24!</title>
+		<style>
+			body {
+				background-color: transparent;
+			}
+			
+			div#board {
+				width: 1024px;
+				height: 1024px;
+				margin-left: 100px;
+				margin-top: 100px;
+				background: url("24card.png") no-repeat;
+			}
+			div#messageArea {
+				position: absolute;
+				top: 0px;
+				left: 0px;
+				color: rgb(30, 175, 19);
+			}
+			div#scoreArea {
+				position: absolute;
+				top: 0px;
+				right: 0px;
+				color: rgb(30, 175, 19);
+			}
+			table {
+				position: absolute;
+				border-spacing: 0px;
+				left: 80px;
+				top: 500px;
+				border-collapse: collapse;
+				border: 1px solid #FF0000;
+			}
+			td {
+				width: 40px;
+				height: 40px;
+				border: 1px solid #FF0000;
+				text-align: center;
+			}
+			.button {
+				position: absolute;
+				left: 0px;
+				padding: 15px;
+				display: inline-block;
+				background-color: rbg(83, 175, 19);
+				text-align: center;
+			}
+			.buttonNumTop {
+				top: 145px;
+				left: 230px;
+			}
+			.buttonNumLeft {
+				top: 220px;
+				left: 150px;
+			}
+			.buttonNumRight {
+				top: 220px;
+				left: 310px;
+			}
+			.buttonNumBottom {
+				top: 300px;
+				left: 230px;
+			}
+			.buttonMathPlus {
+				top: 400px;
+				left: 150px;
+			}
+			.buttonMathMinus {
+				top: 400px;
+				left: 205px;
+			}
+			.buttonMathMult {
+				top: 400px;
+				left: 255px;
+			}
+			.buttonMathDiv {
+				top: 400px;
+				left: 310px;
+			}
+			.buttonNew {
+				bottom: 0px;
+			}
+			.buttonClear {
+				bottom: 50px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="board">
+			<div id="messageArea">
+			</div>
+			<div id="scoreArea">
+			</div>
+			<table id="numbers">
+				<tr>
+					<td id="0"></td><td id="1"></td><td id="2"></td>
+					<td id="3"></td><td id="4"></td><td id="5"></td>
+					<td id="6"></td><td id="7">=</td><td id="8"></td>
+				</tr>
+			</table>
+			<button id="buttonNumTop" class="button buttonNumTop" onclick="handleNumButton(event)"></button>
+			<button id="buttonNumLeft" class="button buttonNumLeft" onclick="handleNumButton(event)"></button>
+			<button id="buttonNumRight" class="button buttonNumRight" onclick="handleNumButton(event)"></button>
+			<button id="buttonNumBottom" class="button buttonNumBottom" onclick="handleNumButton(event)"></button>
+			<button id="buttonMathPlus" class="button buttonMathPlus" onclick="handleMathButton(event)" disabled>+</button>
+			<button id="buttonMathMinus" class="button buttonMathMinus" onclick="handleMathButton(event)" disabled>-</button>
+			<button id="buttonMathMult" class="button buttonMathMult" onclick="handleMathButton(event)" disabled>*</button>
+			<button id="buttonMathDiv" class="button buttonMathDiv" onclick="handleMathButton(event)" disabled>/</button>
+		</div>
+		<button id="buttonNew" class="button buttonNew">New Card</button>			
+		<button id="buttonClear" class="button buttonClear">Clear Inputs</button>
+		<script src="24.js"></script>
+	</body>
+</html>
+
